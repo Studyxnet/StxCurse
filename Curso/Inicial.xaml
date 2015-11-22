@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="Navy" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Curso.Inicial">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout HorizontalOptions="FillAndExpand">
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Nome do evento: " TextColor="White" />
+					<Entry Placeholder="Nome do evento" x:Name="entNome" BackgroundColor="White" TextColor="Black" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Data do evento: " />
+					<DatePicker x:Name="dpEvento" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Hora do evento: " />
+					<TimePicker x:Name="tpEvento" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Nome do organizador: " />
+					<Entry Placeholder="Nome do organizador" x:Name="tpOrg" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+					<Label Text="Tipo do evento" />
+					<Picker x:Name="pckrTipos" Title="Tipo" HorizontalOptions="FillAndExpand">
+					</Picker>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+					<Button Text="Limpar" BackgroundColor="#D32466" TextColor="White" Clicked="clear_Clicked" BorderColor="White" BorderWidth="3" BorderRadius="50" />
+					<Button Text="Cadastrar" BackgroundColor="Green" TextColor="White" Clicked="cadastrar_Clicked" />
+				</StackLayout>
+				<ActivityIndicator IsVisible="false" IsRunning="false" x:Name="aiLoad" />
+				<ProgressBar x:Name="prgBar" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
